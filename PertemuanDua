@@ -1,0 +1,63 @@
+fun main() {
+    // 1. Membandingkan Dua Buah String
+    println("1. Perbandingan String")
+    val string1 = "Susi Susanti"
+    val string2 = "Susi susanti"
+    
+    if (string1 == string2) {
+        println("String sama")
+    } else {
+        println("String tidak sama (karena perbedaan kapital)")
+    }
+
+    // 2. Cek Variabel (Angka contoh: 45)
+    println("\n 2. Cek Bilangan")
+    val angka = 45 
+    
+    if (angka > 50) {
+        println("Bilangan $angka lebih dari 50")
+    } else if (angka < 50) {
+        println("Bilangan $angka kurang dari 50")
+    } else {
+        println("Bilangan adalah 50")
+    }
+    
+    if (angka % 5 == 0) {
+        println("Bilangan $angka merupakan kelipatan 5")
+    } else {
+        println("Bilangan $angka BUKAN kelipatan 5")
+    }
+
+    // 3. Menampilkan Bilangan Genap dalam Array
+    println("\n 3. Bilangan Genap dalam Array")
+    val deretAngka = intArrayOf(21, 32, 43, 24, 27, 28)
+    print("Bilangan genap: ")
+    // Pastikan menggunakan kata kunci 'in' (bukan 'dalam')
+    for (n in deretAngka) {
+        if (n % 2 == 0) {
+            print("$n ")
+        }
+    }
+    println()
+
+    // 4. Klasifikasi Berdasarkan Umur
+    println("\n 4. Klasifikasi Umur")
+    val umur = 15
+    val kategori = when (umur) {
+        in 6..12 -> "Anak-anak"
+        in 13..16 -> "Remaja"
+        in 17..100 -> "Dewasa"
+        else -> "Umur di luar rentang"
+    }
+    println("Umur $umur: $kategori")
+
+    // 5. Bilangan Kelipatan 3 dan 5 (Rentang 1-50)
+    println("\n 5. Kelipatan 3 & 5 (Rentang 1-50)")
+    for (i in 1..50) {
+        when {
+            i % 3 == 0 && i % 5 == 0 -> println("$i: Kelipatan 3 dan 5")
+            i % 3 == 0 -> println("$i: Kelipatan 3")
+            i % 5 == 0 -> println("$i: Kelipatan 5")
+        }
+    }
+}
